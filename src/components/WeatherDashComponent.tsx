@@ -152,11 +152,11 @@ const WeatherDashComponent = () => {
                 <ForecastComponent weatherData={weatherData} />
 
                 <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <SavedLocationsComponent
+                  {/* <SavedLocationsComponent
                     favorites={getFavoriteCities()}
                     onSelectCity={fetchWeatherByCity}
                     onRemoveCity={removeFavoriteCity}
-                  />
+                  /> */}
                 </div>
               </>
             )}
