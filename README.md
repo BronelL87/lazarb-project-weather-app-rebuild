@@ -16,8 +16,8 @@
 ### Peer Review
 
 
-**Reviewer:** 
+**Reviewer:** Chris Wells-Hott
  
 
-**Reviewer Notes:** 
+**Reviewer Notes:** The App works. Maybe make the text color in the favorites list black so the user can see the favorites city names better. I not sure how to delete an item from the favorites list. When I scaled down to mobile the responiveness was not working. Other than that everything work good. Good work!!!
  
