@@ -18,7 +18,7 @@ const SearchBarComponent = ({ onSearch, recentSearches, onSelectRecentSearch }: 
     e.preventDefault();
     if (searchQuery.trim()) {
       onSearch(searchQuery.trim());
-      setFocused(false); // Hide recent searches after searching
+      setFocused(false);
     }
   };
 
@@ -39,7 +39,7 @@ const SearchBarComponent = ({ onSearch, recentSearches, onSelectRecentSearch }: 
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           onFocus={() => setFocused(true)}
-          onBlur={() => setTimeout(() => setFocused(false), 200)} // Delay to allow clicking recent searches
+          onBlur={() => setTimeout(() => setFocused(false), 200)}
         />
       </form>
 
