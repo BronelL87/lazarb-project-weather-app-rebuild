@@ -14,13 +14,11 @@ const CurrentWeatherComponent = ({
   location,
   onAddFavorite 
 }: CurrentWeatherProps) => {
-  // const [currentTime, setCurrentTime] = useState('');
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
-      // setCurrentTime(now.toLocaleTimeString());
       setCurrentDate(now.toLocaleDateString());
     };
 
