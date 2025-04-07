@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import SearchBarComponent from './SearchbarComponent';
 import CurrentWeatherComponent from './CurrentWeatherComponent';
 import ForecastComponent from './ForcastComponent';
-import SavedLocationsComponent from './SavedLocationsComponent';
-import RecentSearchComponent from './RecentSearchComponent';
+// import SavedLocationsComponent from './SavedLocationsComponent';
+// import RecentSearchComponent from './RecentSearchComponent';
 import { WeatherData, LocationData } from '@/interfaces/interfaces';
 
 const WeatherDashComponent = () => {
@@ -106,18 +106,18 @@ const WeatherDashComponent = () => {
   };
 
   const saveFavoriteCity = (city: string) => {
-    let favorites = getFavoriteCities();
+    const favorites = getFavoriteCities();
     if (!favorites.includes(city)) {
       favorites.push(city);
       localStorage.setItem('favoriteCities', JSON.stringify(favorites));
     }
   };
 
-  const removeFavoriteCity = (city: string) => {
-    let favorites = getFavoriteCities();
-    favorites = favorites.filter(item => item != city);
-    localStorage.setItem('favoriteCities', JSON.stringify(favorites));
-  };
+  // const removeFavoriteCity = (city: string) => {
+  //   let favorites = getFavoriteCities();
+  //   favorites = favorites.filter(item => item != city);
+  //   localStorage.setItem('favoriteCities', JSON.stringify(favorites));
+  // };
 
   const getFavoriteCities = (): string[] => {
     const favorites = localStorage.getItem('favoriteCities');
