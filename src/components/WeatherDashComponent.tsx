@@ -101,7 +101,7 @@ const WeatherDashComponent = () => {
   };
 
   const getRecentSearches = (): string[] => {
-    const searches = localStorage.getItem('recentSearches');
+    const searches = typeof window !== 'undefined' ? localStorage.getItem('recentSearches') : null;
     return searches ? JSON.parse(searches) : [];
   };
 
@@ -120,8 +120,8 @@ const WeatherDashComponent = () => {
   // };
 
   const getFavoriteCities = (): string[] => {
-    const favorites = localStorage.getItem('favoriteCities');
-    return favorites ? JSON.parse(favorites) : [];
+    const favorites = typeof window !== 'undefined' ? localStorage.getItem('favoriteCities') : null;
+  return favorites ? JSON.parse(favorites) : [];
   };
 
   return (
